@@ -134,7 +134,7 @@ footer {
     padding: 25px 20px;
 }
 
-/* Responsive simple */
+/* Responsive simple, ajustes para dispositivos móviles. JP */
 @media(max-width:768px){
     .grid-servicios, .grid-proyectos { grid-template-columns: 1fr; }
     .hero { height: 70vh; }
