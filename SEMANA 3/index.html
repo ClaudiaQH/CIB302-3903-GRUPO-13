@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaDigital | Agencia de Transformación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">DIGI<span>JC</span></div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Impulsamos tu presencia en el mundo digital</h1>
+        <p>Estrategia, diseño y desarrollo a medida.</p>
+        <a href="#contacto" class="btn">Empezar proyecto</a>
+    </section>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid-servicios">
+            <div class="card">
+                <h3>SEO & SEM</h3>
+                <p>Optimizamos tu visibilidad en buscadores.</p>
+            </div>
+            <div class="card">
+                <h3>Diseño UX/UI</h3>
+                <p>Interfaces intuitivas que enamoran a tus usuarios.</p>
+            </div>
+            <div class="card">
+                <h3>Desarrollo Web</h3>
+                <p>Sitios rápidos, seguros y escalables.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Email" required>
+            <textarea id="mensaje" placeholder="Cuéntanos tu idea" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <div id="formFeedback"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NovaDigital Agencia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
