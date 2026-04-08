@@ -10,7 +10,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     // Simulación de envío dinámico
     feedback.innerHTML = `<p style="color: green; text-align: center; margin-top: 10px;">
-        ¡Gracias, ${nombre}! Hemos recibido tu mensaje con éxito.
+        ¡Gracias, ${nombre}! Tu estrategia digital empieza ahora. Te contactaremos en breve.
     </p>`;
 
     // Limpiar formulario
