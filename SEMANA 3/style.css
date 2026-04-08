@@ -40,7 +40,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
-/*organiza logo y menú con flexbox JP*/
+/*organiza logo y menú con flexbox JP */
 nav {
     display: flex;
     justify-content: space-between;
