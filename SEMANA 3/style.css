@@ -216,7 +216,7 @@ footer {
 
 footer .logo { color: var(--white); margin-bottom: 20px; display: block; }
 
-/* Responsive simple, ajustes para dispositivos móviles. JP */
+/* Responsive simple, ajustes para dispositivos móviles. JP  */
 @media(max-width:768px){
     .grid-servicios, .grid-proyectos { grid-template-columns: 1fr; }
     .hero { height: 70vh; }
