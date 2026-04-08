@@ -6,11 +6,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const btn = form.querySelector('button');
     const feedback = document.getElementById('formFeedback');
     const formData = new FormData(form);
-    const nombre = formData.get('nombre') || 'amigo/a'; // Uso de FormData es más limpio
-
+    const nombre = document.getElementById('nombre').value;
     // Simulación de envío dinámico
     feedback.innerHTML = `<p style="color: green; text-align: center; margin-top: 10px;">
-        ¡Gracias, ${nombre}! Hemos recibido tu mensaje con éxito.
+        ¡Gracias, ${nombre}! Tu estrategia digital empieza ahora. Te contactaremos en breve.
     </p>`;
 
     // Limpiar formulario
