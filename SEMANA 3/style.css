@@ -1,14 +1,36 @@
+/* 1. VARIABLES: Para mantener consistencia y facilitar cambios rápidos */
+:root {
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --accent: #00d2ff;
+    --dark: #1a1a1a;
+    --light: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. RESET Y BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
 }
 
 body { 
     line-height: 1.6;
-    color: #333; 
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--white);
+    overflow-x: hidden;
 }
+
 /* Estilo del header: barra fija arriba con fondo oscuro y texto blanco JP*/
 header {
     background: #1a1a1a;
@@ -24,15 +46,36 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-/* Logo principal: color azul y negrita JP*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Logo principal: color azul y negrita*/
 .logo span { 
     color: #007bff; 
     font-weight: bold; 
 }
-/* Lista de enlaces: sin viñetas y en línea JP */
+/* Lista de enlaces: sin viñetas y en línea*/
+
 nav ul { 
     display: flex; 
-    list-style: none; 
+    list-style: none;
+    align-items: center;
 }
 
 nav ul li a {
@@ -45,6 +88,7 @@ nav ul li a:hover {
     color: #007bff; 
 }
 
+/* 4. HERO SECTION: Tipografía más impactante */
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
@@ -56,7 +100,6 @@ nav ul li a:hover {
     color: #fff;
     text-align: center;
 }
-
 .hero h1 { margin-bottom: 20px; }
 .hero p { margin-bottom: 30px; }
 .hero .btn {
@@ -68,37 +111,74 @@ nav ul li a:hover {
 }
 
 .hero .btn:hover { background: #0056b3; }
-
 /* Secciones y grid */
 section { padding: 60px 5%; text-align: center; }
 
-h2 { margin-bottom: 40px; }
-/* Grid para servicios y proyectos: alinea las tarjetas de forma ordenada y adaptable */
+/* 5. SECCIONES Y GRIDS: Espaciado generoso */
+section { 
+    padding: 100px 5%; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 { 
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after { /* Línea decorativa bajo el título */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
 .grid-servicios, .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
+/* 6. CARDS: Efectos de elevación sutiles */
 .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.2s;
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: left; /* Alineación a la izquierda suele verse más profesional */
+    border: 1px solid #f1f5f9;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
-.card:hover { transform: translateY(-5px); }
+.card:hover { 
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
 
 .card img, .card iframe {
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: 220px;
+    object-fit: cover; /* Evita que la imagen se estire */
+    border-radius: 12px;
+    margin-bottom: 25px;
 }
 
-.card h3 { margin-bottom: 10px; }
-.card p { font-size: 0.95rem; color: #555; }
+.card h3 { 
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.card p { 
+    font-size: 1rem; 
+    color: var(--text-muted); 
+}
 
 /* Formulario */
 form {
@@ -133,6 +213,8 @@ footer {
     text-align: center;
     padding: 25px 20px;
 }
+
+footer .logo { color: var(--white); margin-bottom: 20px; display: block; }
 
 /* Responsive simple, ajustes para dispositivos móviles. JP */
 @media(max-width:768px){
